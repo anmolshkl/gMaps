@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Find a Place Near You!</title>
+
+    <!-- Bootstrap -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/map.css">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700' rel='stylesheet' type='text/css'>
+  </head>  
+  <body>
+    <div class="container" id="box-container">
+      
+      <div class="col-md-7 well">
+        <div class="col-md-6">
+          Please Enter the GPS location:
+          <br>
+          <label for="Latitude">
+          Latitude: </label><input class="form-control" id="Lat" type="text" name="Latitude" value=28.459663>
+          <label for="Longitude">
+          Longitude: </label><input class="form-control" id="Long" type="text" name="Longitude" value=77.086334><br>
+        </div>
+        <div class="col-md-6 left-border">
+
+          What would you like to search for?<br>
+          <form id="form" name="checks">
+            <div class="checkbox">
+              <label>
+                  <input type="checkbox" name="checkgroup" id="ATM" value="atm">ATM
+              </label>
+            </div>
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" name="checkgroup" id="dept" value="department_store">Department Store<br>
+              </label>
+            </div>
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" name="checkgroup" id="station" value="train_station">Station
+              </label>
+            </div>
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" name="checkgroup" id="Rest" value="restaurant">Restaurant<br>
+              </label>
+            </div>
+          </form>
+          <input class="btn btn-primary" id="submit" name="checkgroup" type="submit" value="SUBMIT" >
+        </div>
+      </div>
+
+      <div class="col-md-4 col-md-offset-1 well" id="help"><u>HELP</u>
+        <br>
+        Select Your Choices(Multiple selection is allowed)
+      </div>
+
+    </div>
+
+    <div id="map-canvas" ></div>
+    
+    <div class="modal fade">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+          <h4 class="modal-title">Hello there!</h4>
+        </div>
+        <div id="modal-body" class="modal-body">
+          
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+  </div><!-- /.modal -->
+    <script type="text/javascript" src="js/map.js"></script>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+  </body>
+</html>
